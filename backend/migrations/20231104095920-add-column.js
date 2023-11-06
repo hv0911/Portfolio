@@ -10,12 +10,12 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
 
-    await await queryInterface.renameColumn('users', 'firstName', 'full_name');
+    // await await queryInterface.renameColumn('users', 'firstName', 'full_name');
 
-    await queryInterface.addColumn('users', 'password', {
-      allowNull: false,
-      type: Sequelize.STRING,
-    });
+    // await queryInterface.addColumn('users', 'password', {
+    //   allowNull: false,
+    //   type: Sequelize.STRING,
+    // });
   },
 
   async down(queryInterface, Sequelize) {
