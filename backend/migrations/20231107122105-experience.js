@@ -3,50 +3,31 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-
-
     /**
      * Add altering commands here.
      *
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-     * 
      */
 
-    await queryInterface.createTable('projects', {
+    await queryInterface.createTable('experiences', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      title: {
+      campany: {
         allowNull: false,
         type: Sequelize.STRING
+      },
+      designation: {
+        allowNull: false,
+        type: Sequelize.STRING,
       },
       description: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      tech_stack: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      project_image_url: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      project_image_public_id: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      live_url: {
         allowNull: true,
-        type: Sequelize.STRING
-      },
-      source_code:{
-        allowNull: true,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
@@ -57,6 +38,7 @@ module.exports = {
         type: Sequelize.DATE
       }
     })
+
   },
 
   async down(queryInterface, Sequelize) {
@@ -66,6 +48,5 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable('projects')
   }
 };

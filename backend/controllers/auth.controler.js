@@ -47,14 +47,12 @@ exports.login = async (req, res) => {
         attributes: ['id', 'email', 'password', 'full_name'], // Include only necessary attributes
         where: { email: email }
       });
-  
       if (!user) {
         return res.status(404).json({
           success: false,
           message: 'User not found'
         });
       }
-  
       const passwordMatches = await bcrypt.compare(password, user.dataValues.password);
   
       if (!passwordMatches) {
@@ -64,10 +62,8 @@ exports.login = async (req, res) => {
         });
       }
   
-      // Generate a token
       const token = generateToken(user.dataValues.email);
   
-      // Set cookie options (you can customize these as needed)
       const cookieOptions = {
         expires: new Date(Date.now() + 120000), // 2 minutes
         httpOnly: true
