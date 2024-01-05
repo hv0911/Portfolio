@@ -15,8 +15,7 @@ exports.isAuthenticate = async (req, res, next) => {
         console.log(decode)
         const user = await User.findOne({ where: { email: decode.email } })
         req.user = user.dataValues;
-        next();
-
+        await next();
     } catch (error) {
         console.log(error)
         res.status(501).json({

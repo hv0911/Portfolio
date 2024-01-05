@@ -4,7 +4,6 @@ const multer = require('multer');
 const upload = multer({ storage });
 const { Project } = require('../models/db.config')
 
-
 exports.createProject = [upload.single('image'), async (req, res) => {
     try {
         console.log(req.file.path)
@@ -136,5 +135,21 @@ exports.deleteProject = async (req, res) => {
     }
 }
 
+exports.getAllProjects = async (req, res) => {
+    try {
+        const Projects = await Project.findAll();
+
+        return res.status(201).json({
+            success: true,
+            projects: Projects,
+        })
+
+    } catch (error) {
+        res.status(501).json({
+            success: false,
+            error: error.message
+        });
+    }
+}
 
 

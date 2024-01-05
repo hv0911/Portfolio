@@ -16,7 +16,9 @@ module.exports = (sequelize, DataTypes) => {
   Experience.init({
     company: DataTypes.STRING,
     designation: DataTypes.STRING,
-    description: DataTypes.STRING
+    description: DataTypes.STRING,
+    start_date:DataTypes.STRING,
+    end_date:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Experience',
