@@ -4,6 +4,7 @@ import * as THREE from "three";
 import moonImage from "../../assets/moon.jpg";
 import venusImage from "../../assets/venus.jpg";
 import spaceImage from "../../assets/space.jpg";
+import Timelines from "../Timeline/Timelines";
 
 const Home = ({ timelines, youtubes, skills }) => {
     useEffect(() => {
@@ -108,7 +109,11 @@ const Home = ({ timelines, youtubes, skills }) => {
         <div className="home">
             <canvas className="homeCanvas"></canvas>
 
-            {/* <div className="homeCanvasContainer">
+
+            <div className="homeContainer">
+                <Typography variant="h3">TIMELINE</Typography>
+                <Timelines />
+            </div>            {/* <div className="homeCanvasContainer">
                 <Typography variant="h1">
                     <p>A</p>
                     <p>B</p>
