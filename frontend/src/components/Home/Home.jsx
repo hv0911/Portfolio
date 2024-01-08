@@ -5,6 +5,10 @@ import moonImage from "../../assets/moon.jpg";
 import venusImage from "../../assets/venus.jpg";
 import spaceImage from "../../assets/space.jpg";
 import Timelines from "../Timeline/Timelines";
+import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import About from "../About/About";
+import Experience from "../Experience/Experience";
 
 const Home = ({ timelines, youtubes, skills }) => {
     useEffect(() => {
@@ -91,40 +95,55 @@ const Home = ({ timelines, youtubes, skills }) => {
 
         animate();
 
-        // return window.addEventListener("scroll", () => {
-        //     camera.rotation.z = window.scrollY * 0.001;
-        //     camera.rotation.y = window.scrollY * 0.003;
+        return window.addEventListener("scroll", () => {
+            camera.rotation.z = window.scrollY * 0.001;
+            camera.rotation.y = window.scrollY * 0.003;
 
-        //     const skillsBox = document.getElementById("homeskillsBox");
+            // const skillsBox = document.getElementById("homeskillsBox");
 
-        //     if (window.scrollY > 1500) {
-        //         skillsBox.style.animationName = "homeskillsBoxAnimationOn";
-        //     } else {
-        //         skillsBox.style.animationName = "homeskillsBoxAnimationOff";
-        //     }
-        // });
+            // if (window.scrollY > 1500) {
+            //     skillsBox.style.animationName = "homeskillsBoxAnimationOn";
+            // } else {
+            //     skillsBox.style.animationName = "homeskillsBoxAnimationOff";
+            // }
+        });
     }, []);
 
     return (
         <div className="home">
             <canvas className="homeCanvas"></canvas>
 
+            <div className="homeCanvasContainer">
+                <Typography variant="h3">
+                    <p>H</p>
+                    <p>A</p>
+                    <p>R</p>
+                    <p>S</p>
+                    <p>H</p>
+                    <p>&nbsp;</p>
+                    <p>V</p>
+                    <p>E</p>
+                    <p>R</p>
+                    <p>M</p>
+                    <p>A</p>
+                </Typography>
+
+                <div className="homeCanvasBox">
+                    <Typography variant="h3">Software</Typography>
+                    <Typography variant="h3">Engineer</Typography>
+                    <Typography variant="h3">Front End </Typography>
+                    <Typography variant="h3">Developer </Typography>
+                </div>
+
+                <Link to='/projects'>View Work </Link>
+            </div>
 
             <div className="homeContainer">
                 <Typography variant="h3">TIMELINE</Typography>
-                <Timelines />
-            </div>            {/* <div className="homeCanvasContainer">
-                <Typography variant="h1">
-                    <p>A</p>
-                    <p>B</p>
-                    <p>H</p>
-                    <p>I</p>
-                    <p>S</p>
-                    <p>H</p>
-                    <p>E</p>
-                    <p>K</p>
-                </Typography>
+                <Experience />
 
+            </div>
+            {/* 
                 <div className="homeCanvasBox">
                     <Typography variant="h2">DESIGNER</Typography>
                     <Typography variant="h2">DEVELOPER</Typography>
@@ -203,7 +222,7 @@ const Home = ({ timelines, youtubes, skills }) => {
                     ))}
                 </div>
             </div> */}
-        </div>
+        </div >
     );
 };
 

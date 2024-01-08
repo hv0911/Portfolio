@@ -1,0 +1,7 @@
+.stepper_img {
+  width: 5vmax;
+  height: 5vmax;
+  border-radius: 50%;
+  object-fit: fill;
+}
+

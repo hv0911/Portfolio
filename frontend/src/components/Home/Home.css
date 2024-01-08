@@ -1,11 +1,91 @@
 .homeCanvas {
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    max-width: 100%;
-    filter: blur(3px) brightness(80%);
-    position: absolute;
-  }
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  max-width: 100%;
+  filter: blur(3px) brightness(80%);
+  position: absolute;
+}
+
+.homeContainer {
+  background-color: white;
+  padding-top: 4vmax;
+  border-radius: 0 0 200px 200px;
+  border-bottom: 200px solid white;
+  position: relative;
+  z-index: 1;
+}
+.homeContainer > h3 {
+  text-align: center;
+  color: rgba(22, 20, 20, 0.904);
+  /* padding: 4vmax; */
+}
+
+.homeCanvasContainer {
+  background-color: rgba(0, 0, 0, 0.048);
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  top: -20%;
+  height: 100vh;
+  color: white;
+  display: flex;
+}
+
+.homeCanvasContainer > h3 {
+  filter: drop-shadow(0 0 2px rgb(28, 116, 216));
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  background-color: white;
+  padding: 2vmax;
+  transform: translate(0%, -50%);
+  text-align: center;
+  font: 700 2.3vmax "Josefin Sans", sans-serif;
+}
+
+.homeCanvasContainer > h3 > p {
+  transition: all 0.5s;
+  color: rgb(36, 36, 36);
+}
+.homeCanvasContainer > h3 > p:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.homeCanvasBox {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  text-align: right;
+  transform: translate(0%, -50%);
+}
+
+.homeCanvasBox > h3 {
+  font: 900 3rem "Ubuntu Mono";
+  letter-spacing: 22px;
+  line-height: 120px;
+  color: white;
+}
+.homeCanvasContainer > a {
+  background-color: white;
+  transition: all 0.5s;
+  color: rgb(0, 0, 0);
+  font: 700 1rem "Ubuntu Mono", "Roboto";
+  text-decoration: none;
+  padding: 2vmax 6vmax;
+  box-sizing: border-box;
+  border: 1px solid white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.homeCanvasContainer > a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+}
+
 /*   
   .homeCanvasContainer {
     background-color: rgba(0, 0, 0, 0.048);
