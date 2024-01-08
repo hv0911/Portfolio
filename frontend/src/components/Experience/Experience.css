@@ -1,7 +1,63 @@
-.stepper_img {
-  width: 5vmax;
-  height: 5vmax;
-  border-radius: 50%;
+.experience {
+  padding-top: 4vmax;
+}
+
+.step {
+  max-width: 900px;
+  margin: auto;
+  /* padding: 4vmax; */
+  display: flex;
+  margin-bottom: 2vmax;
+}
+
+/* .connector {
+  border: 1px solid rgb(101 108 133 / 80%);
+  position: relative;
+  top: 10px;
+  left: 2vmax;
+  z-index: 1;
+  margin-top: 3vmax;
+  margin-bottom:1vmax;
+} */
+
+.step::before{
+  content: "";
+  border: 0.5px solid #D3D3D3;
+  position: relative;
+  top: 2vmax;
+  left: 2.1vmax;
+  z-index: -1;
+}
+
+.step:last-child::before{
+  margin-bottom: 2vmax;
+}
+
+.step{
+  position: relative;
+  z-index: 2;
+}
+
+.step-icon>img {
+  /* margin-top: 1vmax; */
+  width: 4vmax;
+  height: 4vmax;
   object-fit: fill;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.step-content {
+  padding: 0 2vmax;
+}
+
+.step-content>h5 {
+  /* margin-top: 0.5vmax; */
+  margin-bottom: 1vmax;
+  letter-spacing: 1px;
+}
+
+.step-content > div{
+  letter-spacing: 1px;
 }
 

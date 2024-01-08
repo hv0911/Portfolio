@@ -1,53 +1,82 @@
-import React from 'react'
-import Box from '@mui/material/Box';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
+// Experience.js
+
+import React, { useState } from 'react';
 import { Typography } from '@mui/material';
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
-import './Experience.css'
+import './Experience.css'; // Import your CSS file for styling
 
 const steps = [
-    'Select master blaster campaign settings',
-    'Create an ad group',
-    'Create an ad',
+    {
+        title: 'Step 1',
+        imageSrc: 'path_to_image1.jpg',
+        description: 'This is the description for Step 1.',
+    },
+    {
+        title: 'Step 2',
+        imageSrc: 'path_to_image2.jpg',
+        description: 'This is the description for Step 2.',
+    },
+    {
+        title: 'Step 3',
+        imageSrc: 'path_to_image3.jpg',
+        description: 'This is the description for Step 3.',
+    },
 ];
 
-const CustomStepIcon = ({ icon }) => (
-    <img src={icon} alt="Step icon" className='stepper_img' />
-);
-
-const CustomStepConnector = () => (
-    <StepConnector
-        style={{
-            // Add your custom styles here
-            textAlign: "center"
-        }}
-    />
-);
-
 const Experience = () => {
-    return (
-        <Box sx={{ width: '100%', padding: '4vmax' }}>
-            <Stepper activeStep={1} orientation='vertical'>
-                {steps.map((label) => (
-                    <Step key={label}>
-                        <StepLabel
-                            StepIconComponent={() => (
-                                <CustomStepIcon
-                                    icon="https://www.yttags.com/blog/wp-content/uploads/2023/02/image-urls-for-testing.webp"
-                                // icon={index === 0 ? 'path/to/facebook-icon.png' : 'path/to/other-icon.png'} // Set the correct path dynamically
-                                />)} // Adjust the size as needed
-                            sx={{
-                                alignItems: 'flex-start', // Adjust alignment as needed
-                            }}
-                            // connector={<CustomStepConnector />}
-                        >
-                        </StepLabel>
-                    </Step>
-                ))}
-            </Stepper>
-        </Box>)
-}
 
-export default Experience
+    return (
+        <div className='experience'>
+
+            <div className='step'>
+                <div className='connector'></div>
+                <div className='step-icon'>
+                    <img src="https://www.yttags.com/blog/wp-content/uploads/2023/02/image-urls-for-testing.webp" alt="" />
+                </div>
+                <div className="step-content">
+                    <Typography variant='h5'>Software Engineer</Typography>
+                    <div>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum minima maiores totam quidem illum tempora amet est veniam molestias aperiam cumque, atque dolorem unde numquam pariatur repellat! Neque, enim esse!</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum minima maiores totam quidem illum tempora amet est veniam molestias aperiam cumque, atque dolorem unde numquam pariatur repellat! Neque, enim esse!</li>
+                        {/* <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum minima maiores totam quidem illum tempora amet est veniam molestias aperiam cumque, atque dolorem unde numquam pariatur repellat! Neque, enim esse!</li> */}
+                    </div>
+                </div>
+            </div>
+
+            <div className='step'>
+                <div className='connector'></div>
+
+                <div className='step-icon'>
+                    <img src="https://www.yttags.com/blog/wp-content/uploads/2023/02/image-urls-for-testing.webp" alt="" />
+                </div>
+                <div className="step-content">
+                    <Typography variant='h5'>Software Engineer</Typography>
+                    <div>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum minima maiores totam quidem illum tempora amet est veniam molestias aperiam cumque, atque dolorem unde numquam pariatur repellat! Neque, enim esse!</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum minima maiores totam quidem illum tempora amet est veniam molestias aperiam cumque, atque dolorem unde numquam pariatur repellat! Neque, enim esse!</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum minima maiores totam quidem illum tempora amet est veniam molestias aperiam cumque, atque dolorem unde numquam pariatur repellat! Neque, enim esse!</li>
+                    </div>
+                </div>
+            </div>
+
+
+            {/* <div className='step'>
+                <div className='connector'></div>
+
+                <div className='step-icon'>
+                    <img src="https://www.yttags.com/blog/wp-content/uploads/2023/02/image-urls-for-testing.webp" alt="" />
+                </div>
+                <div className="step-content">
+                    <Typography variant='h5'>Software Engineer</Typography>
+                    <div>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum minima maiores totam quidem illum tempora amet est veniam molestias aperiam cumque, atque dolorem unde numquam pariatur repellat! Neque, enim esse!</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum minima maiores totam quidem illum tempora amet est veniam molestias aperiam cumque, atque dolorem unde numquam pariatur repellat! Neque, enim esse!</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum minima maiores totam quidem illum tempora amet est veniam molestias aperiam cumque, atque dolorem unde numquam pariatur repellat! Neque, enim esse!</li>
+                    </div>
+                </div>
+            </div> */}
+
+        </div>
+    );
+};
+
+export default Experience;

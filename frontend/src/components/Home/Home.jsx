@@ -7,6 +7,7 @@ import spaceImage from "../../assets/space.jpg";
 import Timelines from "../Timeline/Timelines";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { MouseOutlined } from '@mui/icons-material'
 import About from "../About/About";
 import Experience from "../Experience/Experience";
 
@@ -136,13 +137,22 @@ const Home = ({ timelines, youtubes, skills }) => {
                 </div>
 
                 <Link to='/projects'>View Work </Link>
+
+                <div className="homeScrollBtn">
+                    <MouseOutlined /> here
+                </div>
+
             </div>
 
             <div className="homeContainer">
                 <Typography variant="h3">TIMELINE</Typography>
                 <Experience />
-
             </div>
+
+            <div className="homeSkills">
+                <Typography variant="h3">Skills</Typography>
+            </div>
+
             {/* 
                 <div className="homeCanvasBox">
                     <Typography variant="h2">DESIGNER</Typography>
