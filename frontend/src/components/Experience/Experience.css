@@ -31,6 +31,7 @@
 
 .step:last-child::before{
   margin-bottom: 2vmax;
+  /* border: none; */
 }
 
 .step{

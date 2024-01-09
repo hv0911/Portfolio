@@ -10,6 +10,18 @@ import { Link } from "react-router-dom";
 import { MouseOutlined } from '@mui/icons-material'
 import About from "../About/About";
 import Experience from "../Experience/Experience";
+import {
+    SiReact,
+    SiJavascript,
+    SiMongodb,
+    SiNodedotjs,
+    SiExpress,
+    SiCss3,
+    SiHtml5,
+    SiThreedotjs,
+    SiAngular
+} from "react-icons/si";
+import ReactIcon from '../../assets/react.svg'
 
 const Home = ({ timelines, youtubes, skills }) => {
     useEffect(() => {
@@ -151,7 +163,53 @@ const Home = ({ timelines, youtubes, skills }) => {
 
             <div className="homeSkills">
                 <Typography variant="h3">Skills</Typography>
+                <div className="skillContainer">
+                    <div className="skillBox">
+                        <SiJavascript />
+                        <Typography variant="h5">React.js</Typography>
+                        <input type="range" name="" id="" value={50} />
+                    </div>
+                    <div className="skillBox">
+                        {/* <SiReact /> */}
+                        <img src={ReactIcon} alt="" style={{ fill: "white" }} />
+                        <Typography variant="h5">React.js</Typography>
+                        <input type="range" name="" id="" value={50} />
+                    </div>
+                    <div className="skillBox">
+                        <SiNodedotjs />
+                        <Typography variant="h5">React.js</Typography>
+                        <input type="range" name="" id="" value={50} />
+                    </div>
+                    <div className="skillBox">
+                        <SiAngular />
+                        <Typography variant="h5">Angular</Typography>
+                        <input type="range" name="" id="" value={50} />
+                    </div>
+                    <div className="skillBox">
+                        <SiAngular />
+                        <Typography variant="h5">Angular</Typography>
+                        <input type="range" name="" id="" value={50} />
+                    </div>
+                    <div className="skillBox">
+                        <SiAngular />
+                        <Typography variant="h5">Angular</Typography>
+                        <input type="range" name="" id="" value={50} />
+                    </div>
+                    <div className="skillBox">
+                        <SiAngular />
+                        <Typography variant="h5">Angular</Typography>
+                        <input type="range" name="" id="" value={50} />
+                    </div>
+                    <div className="skillBox">
+                        <SiAngular />
+                        <Typography variant="h5">Angular</Typography>
+                        <input type="range" name="" id="" value={50} />
+                    </div>
+                </div>
+
             </div>
+
+
 
             {/* 
                 <div className="homeCanvasBox">
