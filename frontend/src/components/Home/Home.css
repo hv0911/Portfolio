@@ -16,7 +16,7 @@
   z-index: 1;
 }
 
-.homeContainer > h3 {
+.homeContainer>h3 {
   text-align: center;
   color: rgba(22, 20, 20, 0.904);
   /* padding: 4vmax; */
@@ -33,7 +33,7 @@
   display: flex;
 }
 
-.homeCanvasContainer > h3 {
+.homeCanvasContainer>h3 {
   filter: drop-shadow(0 0 2px rgb(28, 116, 216));
   position: absolute;
   top: 50%;
@@ -45,12 +45,12 @@
   font: 700 2.3vmax "Josefin Sans", sans-serif;
 }
 
-.homeCanvasContainer > h3 > p {
+.homeCanvasContainer>h3>p {
   transition: all 0.5s;
   color: rgb(36, 36, 36);
 }
 
-.homeCanvasContainer > h3 > p:hover {
+.homeCanvasContainer>h3>p:hover {
   transform: translateY(-5px);
   cursor: pointer;
   /* background-color: url('../../assets/react.svg'); */
@@ -64,14 +64,14 @@
   transform: translate(0%, -50%);
 }
 
-.homeCanvasBox > h3 {
+.homeCanvasBox>h3 {
   font: 900 3rem "Ubuntu Mono";
   letter-spacing: 22px;
   line-height: 120px;
   color: white;
 }
 
-.homeCanvasContainer > a {
+.homeCanvasContainer>a {
   background-color: white;
   transition: all 0.5s;
   color: rgb(0, 0, 0);
@@ -86,7 +86,7 @@
   transform: translate(-50%, -50%);
 }
 
-.homeCanvasContainer > a:hover {
+.homeCanvasContainer>a:hover {
   color: rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0);
 }
@@ -107,11 +107,12 @@
   overflow-x: hidden;
 }
 
-.homeSkills > h3 {
+.homeSkills>h3 {
   text-align: center;
   color: white;
   margin-bottom: 4vmax;
-  margin-top: 4vmax; /* Here is added */
+  margin-top: 4vmax;
+  /* Here is added */
   font-size: 4vmax;
 }
 
@@ -127,14 +128,16 @@
   animation: scrollPop 0.5s ease-in infinite alternate;
 }
 
-.homeScrollBtn > svg {
+.homeScrollBtn>svg {
   font-size: 3vmax;
   color: rgb(255, 255, 255);
 }
 
-.skillContainer{
+.skillContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .skillBox {
@@ -152,13 +155,20 @@
   margin: 10px;
 }
 
-.skillBox h5{
+.skillBox h5 {
   color: white;
   margin-bottom: 10px;
 }
 
-.skillBox input{
+.skillBox input {
   background-color: blueviolet;
+}
+
+
+@media screen and (max-width:600px) {
+  .homeCanvasBox>h3 {
+    letter-spacing: 13px !important;
+  }
 }
 
 

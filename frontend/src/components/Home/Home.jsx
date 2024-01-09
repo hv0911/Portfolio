@@ -18,9 +18,16 @@ import {
     SiExpress,
     SiCss3,
     SiHtml5,
-    SiThreedotjs,
-    SiAngular
+    SiReactivex,
+    SiNgrx,
+    SiTypescript,
+    SiAngular,
+    SiBootstrap,
+    SiRedux,
+    SiJquery
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+
 import ReactIcon from '../../assets/react.svg'
 
 const Home = ({ timelines, youtubes, skills }) => {
@@ -144,7 +151,7 @@ const Home = ({ timelines, youtubes, skills }) => {
                 <div className="homeCanvasBox">
                     <Typography variant="h3">Software</Typography>
                     <Typography variant="h3">Engineer</Typography>
-                    <Typography variant="h3">Front End </Typography>
+                    <Typography variant="h3">Front End</Typography>
                     <Typography variant="h3">Developer </Typography>
                 </div>
 
@@ -166,43 +173,70 @@ const Home = ({ timelines, youtubes, skills }) => {
                 <div className="skillContainer">
                     <div className="skillBox">
                         <SiJavascript />
+                        <Typography variant="h5">JavaScript</Typography>
+                        <input type="range" name="" id="" value={80} />
+                    </div>
+                    <div className="skillBox">
+                        <SiReact />
                         <Typography variant="h5">React.js</Typography>
+                        <input type="range" name="" id="" value={70} />
+                    </div>
+                    <div className="skillBox">
+                        <SiRedux />
+                        <Typography variant="h5">Redux</Typography>
+                        <input type="range" name="" id="" value={60} />
+                    </div>
+                    <div className="skillBox">
+                        <SiAngular />
+                        <Typography variant="h5">Angular</Typography>
+                        <input type="range" name="" id="" value={80} />
+                    </div>
+                    <div className="skillBox">
+                        <SiTypescript />
+                        {/* <img src={ReactIcon} alt="" style={{ fill: "white" }} /> */}
+                        <Typography variant="h5">Typescript</Typography>
+                        <input type="range" name="" id="" value={70} />
+                    </div>
+                    <div className="skillBox">
+                        <SiNgrx />
+                        <Typography variant="h5">Ngrx</Typography>
+                        <input type="range" name="" id="" value={60} />
+                    </div>
+                    <div className="skillBox">
+                        <SiReactivex />
+                        <Typography variant="h5">Rxjs</Typography>
                         <input type="range" name="" id="" value={50} />
                     </div>
                     <div className="skillBox">
-                        {/* <SiReact /> */}
-                        <img src={ReactIcon} alt="" style={{ fill: "white" }} />
-                        <Typography variant="h5">React.js</Typography>
-                        <input type="range" name="" id="" value={50} />
+                        <SiBootstrap />
+                        <Typography variant="h5">Bootstrap</Typography>
+                        <input type="range" name="" id="" value={80} />
                     </div>
+                    <div className="skillBox">
+                        <SiHtml5 />
+                        <Typography variant="h5">HTML/CSS</Typography>
+                        <input type="range" name="" id="" value={85} />
+                    </div>
+
                     <div className="skillBox">
                         <SiNodedotjs />
-                        <Typography variant="h5">React.js</Typography>
-                        <input type="range" name="" id="" value={50} />
+                        <Typography variant="h5">Node.js</Typography>
+                        <input type="range" name="" id="" value={60} />
                     </div>
                     <div className="skillBox">
-                        <SiAngular />
-                        <Typography variant="h5">Angular</Typography>
+                        <SiExpress />
+                        <Typography variant="h5">Express.js</Typography>
                         <input type="range" name="" id="" value={50} />
                     </div>
+
                     <div className="skillBox">
-                        <SiAngular />
-                        <Typography variant="h5">Angular</Typography>
-                        <input type="range" name="" id="" value={50} />
+                        <FaJava />
+                        <Typography variant="h5">Java</Typography>
+                        <input type="range" name="" id="" value={40} />
                     </div>
                     <div className="skillBox">
-                        <SiAngular />
-                        <Typography variant="h5">Angular</Typography>
-                        <input type="range" name="" id="" value={50} />
-                    </div>
-                    <div className="skillBox">
-                        <SiAngular />
-                        <Typography variant="h5">Angular</Typography>
-                        <input type="range" name="" id="" value={50} />
-                    </div>
-                    <div className="skillBox">
-                        <SiAngular />
-                        <Typography variant="h5">Angular</Typography>
+                        <SiJquery />
+                        <Typography variant="h5">jQuery</Typography>
                         <input type="range" name="" id="" value={50} />
                     </div>
                 </div>
