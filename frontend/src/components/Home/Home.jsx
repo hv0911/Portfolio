@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import * as THREE from "three";
 import moonImage from "../../assets/moon.jpg";
@@ -29,8 +29,12 @@ import {
 import { FaJava } from "react-icons/fa";
 
 import ReactIcon from '../../assets/react.svg'
+import ProjectCard from "../ProjectCard/ProjectCard";
 
 const Home = ({ timelines, youtubes, skills }) => {
+
+    const [projects, setProjects] = useState([1, 2, 3])
+
     useEffect(() => {
         const textureLoader = new THREE.TextureLoader();
 
@@ -129,6 +133,8 @@ const Home = ({ timelines, youtubes, skills }) => {
         });
     }, []);
 
+
+
     return (
         <div className="home">
             <canvas className="homeCanvas"></canvas>
@@ -155,7 +161,8 @@ const Home = ({ timelines, youtubes, skills }) => {
                     <Typography variant="h3">Developer </Typography>
                 </div>
 
-                <Link to='/projects'>View Work </Link>
+                {/* <Link to='#'>View Work </Link> */}
+                <a href="#projects">View Work</a>
 
                 <div className="homeScrollBtn">
                     <MouseOutlined /> here
@@ -243,7 +250,16 @@ const Home = ({ timelines, youtubes, skills }) => {
 
             </div>
 
-
+            <div id="projects" className="projects">
+                <Typography variant="h3" style={{ textAlign: 'center' }}>Projects</Typography>
+                <div className="projectsWrapper">
+                    {
+                        projects.map((project) => {
+                            <ProjectCard />
+                        })
+                    }
+                </div>
+            </div>
 
             {/* 
                 <div className="homeCanvasBox">
