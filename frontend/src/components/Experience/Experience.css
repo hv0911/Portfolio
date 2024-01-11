@@ -24,15 +24,18 @@
 
 .step::before{
   content: "";
-  border: 0.5px solid #D3D3D3;
+  border: 1px solid #d7d7d7;
+  /* box-shadow: 1px 1px 5px; */
   position: relative;
   top: 2vmax;
   left: 2.1vmax;
-  z-index: -1;
+  z-index: -1; 
 }
 
 .step:last-child::before{
   margin-bottom: 2vmax;
+  /* box-shadow: 1px 1px 5px; */
+
   /* border: none; */
 }
 
@@ -48,6 +51,7 @@
   object-fit: fill;
   border-radius: 50%;
   z-index: 10;
+  box-shadow: 1px 3px 10px;
 }
 
 .step-content {

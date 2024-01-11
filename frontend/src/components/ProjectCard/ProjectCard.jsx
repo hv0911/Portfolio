@@ -5,9 +5,11 @@ const ProjectCard = () => {
     return (
         <div>
             <div>
-                <img src={moon} alt="" />
+                <img src={moon} alt="" style={{width:"4vmax"}} />
             </div>
+            <div>
 
+            </div>
         </div>
     )
 }

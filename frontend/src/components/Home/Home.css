@@ -56,6 +56,21 @@
   /* background-color: url('../../assets/react.svg'); */
 }
 
+/* .menu {
+  width: 100vw;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.menu a {
+   text-decoration: none;
+   background-color: white;
+   color: black;
+   padding: 1vmax;
+   margin: 1vmax;
+   border: 1px solid white;
+} */
+
 .homeCanvasBox {
   position: absolute;
   top: 50%;
@@ -86,7 +101,7 @@
   transform: translate(-50%, -50%);
 }
 
-.homeCanvasContainer > a:hover {
+.homeCanvasContainer > a:hover ,.menu a:hover {
   color: rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0);
 }
@@ -116,7 +131,7 @@
   font-size: 4vmax;
 }
 
-.homeScrollBtn {
+.homeScrollBtn  {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,6 +153,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3vmax;
 }
 
 .skillBox {

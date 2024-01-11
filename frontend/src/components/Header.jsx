@@ -17,7 +17,7 @@ const Header = () => {
             link4Text="Contact"
             link1Url="/"
             link2Url="/about"
-            link3Url="#projects"
+            link3Url="/#projects"
             link4Url="/contact"
             link1Color="HSL(250,100%,75%)"
             link1ColorHover="white"

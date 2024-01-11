@@ -5,7 +5,7 @@ import moonImage from "../../assets/moon.jpg";
 import venusImage from "../../assets/venus.jpg";
 import spaceImage from "../../assets/space.jpg";
 import Timelines from "../Timeline/Timelines";
-import { Typography } from "@mui/material";
+import { Box, CircularProgress, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { MouseOutlined } from '@mui/icons-material'
 import About from "../About/About";
@@ -24,16 +24,27 @@ import {
     SiAngular,
     SiBootstrap,
     SiRedux,
-    SiJquery
+    SiJquery,
+    SiTailwindcss
+
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
 import ReactIcon from '../../assets/react.svg'
 import ProjectCard from "../ProjectCard/ProjectCard";
+import Footer from "../Footer/Footer";
 
 const Home = ({ timelines, youtubes, skills }) => {
 
     const [projects, setProjects] = useState([1, 2, 3])
+    const [loading, setLoading] = useState(true);
+
+    const scrollToProjects = () => {
+        const projectsSection = document.getElementById('projects');
+        if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     useEffect(() => {
         const textureLoader = new THREE.TextureLoader();
@@ -119,6 +130,8 @@ const Home = ({ timelines, youtubes, skills }) => {
 
         animate();
 
+        setLoading(false);
+
         return window.addEventListener("scroll", () => {
             camera.rotation.z = window.scrollY * 0.001;
             camera.rotation.y = window.scrollY * 0.003;
@@ -137,9 +150,26 @@ const Home = ({ timelines, youtubes, skills }) => {
 
     return (
         <div className="home">
+
+            {
+                loading &&
+                <Box sx={{ display: 'flex', position: 'absolute', top: "50%", left: "50%" }}>
+                    <CircularProgress />
+                </Box>
+
+            }
+
+
+
             <canvas className="homeCanvas"></canvas>
 
             <div className="homeCanvasContainer">
+
+                {/* <div className="menu">
+                    <Link to='/about'>About Me</Link>
+                    <Link to='/contact'>Contact Me</Link>
+                </div> */}
+
                 <Typography variant="h3">
                     <p>H</p>
                     <p>A</p>
@@ -162,7 +192,7 @@ const Home = ({ timelines, youtubes, skills }) => {
                 </div>
 
                 {/* <Link to='#'>View Work </Link> */}
-                <a href="#projects">View Work</a>
+                <a href="#projects" onClick={scrollToProjects}>View Work</a>
 
                 <div className="homeScrollBtn">
                     <MouseOutlined /> here
@@ -226,6 +256,12 @@ const Home = ({ timelines, youtubes, skills }) => {
                     </div>
 
                     <div className="skillBox">
+                        <SiTailwindcss />
+                        <Typography variant="h5">Tailwind</Typography>
+                        <input type="range" name="" id="" value={85} />
+                    </div>
+
+                    <div className="skillBox">
                         <SiNodedotjs />
                         <Typography variant="h5">Node.js</Typography>
                         <input type="range" name="" id="" value={60} />
@@ -250,13 +286,20 @@ const Home = ({ timelines, youtubes, skills }) => {
 
             </div>
 
+            {/* <Footer /> */}
+
+            {/* <footer>
+                Here is the footer
+            </footer> */}
+
             <div id="projects" className="projects">
                 <Typography variant="h3" style={{ textAlign: 'center' }}>Projects</Typography>
                 <div className="projectsWrapper">
                     {
-                        projects.map((project) => {
-                            <ProjectCard />
-                        })
+                        projects.map((project) => (
+                            <ProjectCard /* pass any necessary props to ProjectCard */ />
+
+                        ))
                     }
                 </div>
             </div>
