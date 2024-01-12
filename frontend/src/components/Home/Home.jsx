@@ -29,22 +29,40 @@ import {
 
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-
+import { useParams } from 'react-router-dom';
 import ReactIcon from '../../assets/react.svg'
 import ProjectCard from "../ProjectCard/ProjectCard";
 import Footer from "../Footer/Footer";
 
-const Home = ({ timelines, youtubes, skills }) => {
+const Home = ({ timelines, youtubes, skills, fragement }) => {
 
     const [projects, setProjects] = useState([1, 2, 3])
     const [loading, setLoading] = useState(true);
+    const [fragment, setFragment] = useState(window.location.hash.slice(1));
 
-    const scrollToProjects = () => {
-        const projectsSection = document.getElementById('projects');
-        if (projectsSection) {
-            projectsSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+    useEffect(() => {
+        const handleHashChange = () => {
+            const newFragment = window.location.hash.slice(1);
+            setFragment(newFragment);
+
+            // Check if the fragment is equal to "project"
+            if (newFragment === 'projects') {
+                // Get the DOM element of the project section (replace 'project-section' with the actual ID)
+                const projectSection = document.getElementById('projects');
+
+                // Scroll to the project section
+                if (projectSection) {
+                    projectSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        };
+
+        window.addEventListener('hashchange', handleHashChange);
+
+        return () => {
+            window.removeEventListener('hashchange', handleHashChange);
+        };
+    }, [fragment]);
 
     useEffect(() => {
         const textureLoader = new THREE.TextureLoader();
@@ -148,6 +166,16 @@ const Home = ({ timelines, youtubes, skills }) => {
 
 
 
+    const scrollToProjects = () => {
+        const urlFragment = window.location.hash.slice(1); // Remove the leading #
+        if (urlFragment == 'projects') {
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
+
     return (
         <div className="home">
 
@@ -187,7 +215,7 @@ const Home = ({ timelines, youtubes, skills }) => {
                 <div className="homeCanvasBox">
                     <Typography variant="h3">Software</Typography>
                     <Typography variant="h3">Engineer</Typography>
-                    <Typography variant="h3">Front End</Typography>
+                    <Typography variant="h3">Full Stack</Typography>
                     <Typography variant="h3">Developer </Typography>
                 </div>
 
@@ -297,8 +325,13 @@ const Home = ({ timelines, youtubes, skills }) => {
                 <div className="projectsWrapper">
                     {
                         projects.map((project) => (
-                            <ProjectCard /* pass any necessary props to ProjectCard */ />
-
+                            <ProjectCard
+                                url="https://github.com/hv0911/Portfolio"
+                                projectImage={moonImage}
+                                projectTitle="Portfolio"
+                                description="GeeksforGeeks is organizing one of the biggest events called THE GEEKS SUMMER CARNIVAL, in which you can experience fun, excitement, entertainment, and games. Also, get loads of discounts, goodies & various other cool stuff. throughout the carnival days. Event dates for which are 26 March to 2 April 2022.  …"
+                                technologies="Nodejs Express MongoDB"
+                            /* pass any necessary props to ProjectCard */ />
                         ))
                     }
                 </div>

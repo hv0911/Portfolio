@@ -13,17 +13,17 @@ const Header = () => {
             nav3justifyContent="space-around"
             link1Text="Home"
             link2Text="About"
-            link3Text="Projects"
-            link4Text="Contact"
-            link1Url="/"
+            link3Text="Contact"
+            link4Text="Admin"
+            link1Url="/home"
             link2Url="/about"
-            link3Url="/#projects"
+            link3Url="https://github.com/hv0911"
             link4Url="/contact"
             link1Color="HSL(250,100%,75%)"
             link1ColorHover="white"
             link1Size="1.5rem"
             link1Padding="3vmax"
-            profileIcon={true}
+            profileIcon={false}
             ProfileIconElement={FaUserAlt}
         />
     )
