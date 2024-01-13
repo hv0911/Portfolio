@@ -15,6 +15,15 @@ const storage = new CloudinaryStorage({
     }
 });
 
+const experienceStorage = new CloudinaryStorage({
+    cloudinary,
+    params:{
+        folder:'experiences',
+        allowedFormats: ['jpeg', 'png', 'jpg'],
+    }
+})
+
 module.exports = {
-    storage
+    storage,
+    experienceStorage
 };
