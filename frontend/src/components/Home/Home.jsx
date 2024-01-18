@@ -34,7 +34,7 @@ import ReactIcon from '../../assets/react.svg'
 import ProjectCard from "../ProjectCard/ProjectCard";
 import Footer from "../Footer/Footer";
 
-const Home = ({ timelines, youtubes, skills, fragement }) => {
+const Home = ({ timelines, youtubes, skills }) => {
 
     const [projects, setProjects] = useState([1, 2, 3])
     const [loading, setLoading] = useState(true);
@@ -336,86 +336,6 @@ const Home = ({ timelines, youtubes, skills, fragement }) => {
                     }
                 </div>
             </div>
-
-            {/* 
-                <div className="homeCanvasBox">
-                    <Typography variant="h2">DESIGNER</Typography>
-                    <Typography variant="h2">DEVELOPER</Typography>
-                    <Typography variant="h2">TEACHER</Typography>
-                    <Typography variant="h2">CONTENT CREATOR</Typography>
-                </div>
-
-                <Link to="/projects">VIEW WORK</Link>
-            </div>
-
-            <div className="homeScrollBtn">
-                <MouseOutlined />
-            </div>
-
-            <div className="homeContainer">
-                <Typography variant="h3">TIMELINE</Typography>
-                <TimeLine timelines={timelines} />
-            </div>
-
-            <div className="homeSkills">
-                <Typography variant="h3">SKILLS</Typography>
-
-                <div className="homeCubeSkills">
-                    <div className="homeCubeSkillsFaces homeCubeSkillsFace1">
-                        <img src={skills.image1.url} alt="Face1" />
-                    </div>
-
-                    <div className="homeCubeSkillsFaces homeCubeSkillsFace2">
-                        <img src={skills.image2.url} alt="Face2" />
-                    </div>
-
-                    <div className="homeCubeSkillsFaces homeCubeSkillsFace3">
-                        <img src={skills.image3.url} alt="Face3" />
-                    </div>
-
-                    <div className="homeCubeSkillsFaces homeCubeSkillsFace4">
-                        <img src={skills.image4.url} alt="Face4" />
-                    </div>
-
-                    <div className="homeCubeSkillsFaces homeCubeSkillsFace5">
-                        <img src={skills.image5.url} alt="Face5" />
-                    </div>
-
-                    <div className="homeCubeSkillsFaces homeCubeSkillsFace6">
-                        <img src={skills.image6.url} alt="Face6" />
-                    </div>
-                </div>
-
-                <div className="cubeShadow"></div>
-
-                <div className="homeskillsBox" id="homeskillsBox">
-                    <SiCplusplus />
-                    <SiHtml5 />
-                    <SiCss3 />
-                    <SiJavascript />
-                    <SiMongodb />
-                    <SiExpress />
-                    <SiReact />
-                    <SiNodedotjs />
-                    <SiThreedotjs />
-                </div>
-            </div>
-
-            <div className="homeYoutube">
-                <Typography variant="h3"> YOUTUBE VIDEOS</Typography>
-
-                <div className="homeYoutubeWrapper">
-                    {youtubes.map((item) => (
-                        <YoutubeCard
-                            image={item.image.url}
-                            title={item.title}
-                            url={item.url}
-                            id={item._id}
-                            key={item._id}
-                        />
-                    ))}
-                </div>
-            </div> */}
         </div >
     );
 };

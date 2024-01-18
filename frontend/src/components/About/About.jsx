@@ -1,51 +1,39 @@
-import { Typography } from "@mui/material";
-import React from "react";
-import "./About.css";
+import React from 'react'
+import './About.css'
+import { Typography } from '@mui/material'
+import moon from '../../assets/moon.jpg'
 
-const About = ({ about }) => {
+const About = () => {
     return (
-        <div className="about">
+        <div className='about'>
             <div className="aboutContainer">
-                <Typography>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, dignissimos!</Typography>
+                <blockquote>
+                    <Typography>
+                        "Programming isn't about what you know; it's about what you can figure out"
+                    </Typography>
+                </blockquote>
             </div>
             <div className="aboutContainer2">
                 <div>
-                    <img src="../../assets/" alt="" srcset="" />
-                    <Typography
-                        variant="h4"
-                        style={{ margin: "1vmax 0", color: "black" }}
-                    >
-                        {/* {about.name} */}
-                        Harsh Verma
-                    </Typography>
+                    <img src={moon} alt="Harsh Verma" className='aboutAvatar' />
 
-                    <Typography>
-                        {/* {about.title} */}
-                        Here
-                    </Typography>
+                    <Typography variant='h4' style={{ padding: '1vmax 0', color: 'black' }}>Harsh Verma</Typography>
 
-                    <Typography style={{ margin: "1vmax 0", textAlign: "center" }}>
-                        {/* {about.subtitle} */}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eligendi dolores amet reiciendis quis quaerat totam architecto laborum eaque enim exercitationem distinctio deserunt aliquam, est, consequuntur hic ipsam necessitatibus repellat? Ipsa sint tenetur est laboriosam minus dolor deserunt necessitatibus nihil eligendi consequatur molestias pariatur consequuntur obcaecati ipsam beatae nulla, asperiores illum doloremque, consectetur deleniti sapiente at animi distinctio? Sed, dolor?
-                    </Typography>
+                    <Typography >Frontend Developer</Typography>
                 </div>
-
                 <div>
-                    <Typography
-                        style={{
-                            wordSpacing: "5px",
-                            lineHeight: "50px",
-                            letterSpacing: "5px",
-                            textAlign: "right",
-                        }}
-                    >
-                        {/* {about.description} */}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eligendi dolores amet reiciendis quis quaerat totam architecto laborum eaque enim exercitationem distinctio deserunt aliquam, est, consequuntur hic ipsam necessitatibus repellat? Ipsa sint tenetur est laboriosam minus dolor deserunt necessitatibus nihil eligendi consequatur molestias pariatur consequuntur obcaecati ipsam beatae nulla, asperiores illum doloremque, consectetur deleniti sapiente at animi distinctio? Sed, dolor?
+                    <Typography style={{
+                        wordSpacing: "5px",
+                        lineHeight: '50px',
+                        letterSpacing: '5px',
+                        textAlign: 'right'
+                    }}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ab error, dolor ex nulla consequatur, nesciunt esse non est fugiat corrupti, omnis nisi sint illo.
                     </Typography>
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default About;
+export default About

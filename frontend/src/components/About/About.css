@@ -5,19 +5,19 @@
 }
 
 .aboutContainer {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   width: 60%;
   height: 70vh;
   position: absolute;
   right: 0;
-
-  display: flex;
-  justify-content: right;
-  padding: 2vmax;
+  /* justify-content: right; */
   box-sizing: border-box;
+  padding: 1.5vmax;
 }
 
-.aboutContainer > p {
+.aboutContainer p {
+  position: absolute;
+  right: 0;
   text-align: right;
   letter-spacing: 5px;
   word-spacing: 5px;
@@ -31,24 +31,26 @@
   width: 60%;
   min-height: 80vh;
   background-color: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.281);
   position: absolute;
   bottom: 0;
   box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.281);
   padding: 2vmax;
   display: flex;
-  transform: translateX(-100vw) translateY(-10%) rotateZ(-360deg);
-
+  /* align-items: center; */
+  justify-content: center;
+  transform: translateX(-100vw) translateY(-10%) rotate(-360deg);
   animation: aboutAnimation 1s ease-in forwards;
 }
+
 .aboutContainer2 > div {
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 1vmax;
-  color: rgba(17, 17, 17, 0.712);
-  box-sizing: border-box;
+  color: rgba(17, 17, 17, 0.721);
 }
+
 .aboutContainer2 > div:first-child {
   align-items: center;
 }
@@ -58,6 +60,7 @@
   height: 300px;
   border-radius: 100%;
   transition: all 1s;
+  cursor: pointer;
 }
 
 .aboutAvatar:hover {
@@ -70,11 +73,13 @@
     transform: translateX(20%) translateY(-10%);
   }
 }
+
 @keyframes aboutAnimationPhone {
   to {
-    transform: translateX(0%) translateY(0%);
+    transform: translateX(0) translateY(0);
   }
 }
+
 @media screen and (max-width: 600px) {
   .about {
     align-items: flex-end;
