@@ -34,7 +34,6 @@
 .loginForm > h4 > p {
   transition: all 0.5s;
   cursor: default;
-  font: 1.5rem "Roboto";
 }
 
 .loginForm > h4 > p:hover {
