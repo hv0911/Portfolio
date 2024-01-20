@@ -1,6 +1,7 @@
 const { User } = require('../models/db.config')
 const bcrypt = require('bcrypt');
 const { generateToken } = require('../util/jwt.util');
+const { sendMail } = require('../middlewares/sendMail.middleware');
 
 
 // exports.login = async (req, res) => {
@@ -108,7 +109,22 @@ exports.contactMe = async (req, res) => {
 
   try {
 
-    
+    const { name, email, message } = req.body;
+
+    const userMessage = {
+      name: name,
+      email: email,
+      message: `Hi I am ${name} and my email is ${email}. 
+            ${message}
+      `
+    }
+
+    await sendMail(userMessage);
+
+    return res.status(200).json({
+      success: true,
+      message: "Message send Successfully!"
+    })
 
   } catch (error) {
     res.status(500).json({
