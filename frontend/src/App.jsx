@@ -5,8 +5,17 @@ import About from "./components/About/About.jsx"
 import Footer from "./components/Footer/Footer.jsx"
 import Contact from "./components/Contact/Contact.jsx"
 import Login from "./components/Login/Login.jsx"
+import { useDispatch } from "react-redux"
+import { useEffect } from "react"
+import { getProjects } from "./redux/actions/home.actions.js"
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getProjects());
+  }, [])
 
   return (
     <div className='App'>

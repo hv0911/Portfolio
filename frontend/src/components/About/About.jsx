@@ -19,7 +19,7 @@ const About = () => {
 
                     <Typography variant='h4' style={{ padding: '1vmax 0', color: 'black' }}>Harsh Verma</Typography>
 
-                    <Typography >Frontend Developer</Typography>
+                    <Typography style={{textWrap:'nowrap'}}>Frontend Developer</Typography>
                 </div>
                 <div>
                     <Typography style={{

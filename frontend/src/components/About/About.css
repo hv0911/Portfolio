@@ -40,7 +40,7 @@
   /* align-items: center; */
   justify-content: center;
   transform: translateX(-100vw) translateY(-10%) rotate(-360deg);
-  animation: aboutAnimation 1s ease-in forwards;
+  animation: aboutAnimation 1.4s ease-out forwards;
 }
 
 .aboutContainer2 > div {
@@ -101,8 +101,8 @@
   }
 
   .aboutAvatar {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     transform: translateY(-80%);
   }
 }

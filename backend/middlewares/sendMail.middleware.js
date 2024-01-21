@@ -1,8 +1,8 @@
-import { createTransport } from "nodemailer"
+const nodemailer = require("nodemailer");
 
-export const sendMail = async (userMessage) => {
+exports.sendMail = async (userMessage) => {
 
-    const transporter = createTransport({
+    const transporter = nodemailer.createTransport({
         service: process.env.SMTP_SERVICE,
         auth: {
             user: process.env.SMPT_USER,
@@ -13,7 +13,7 @@ export const sendMail = async (userMessage) => {
     const mailOptions = {
         from: process.env.SMPT_USER,
         to: process.env.SMPT_USER,
-        subject: `CONTACT REQUEST(${userMessage.message}) FROM PORTFOLIO `,
+        subject: `CONTACT REQUEST(${userMessage.name}) FROM PORTFOLIO `,
         text: userMessage.message,
     };
 

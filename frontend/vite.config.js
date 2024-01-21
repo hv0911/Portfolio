@@ -8,6 +8,14 @@ export default defineConfig({
   server: {
     port: 3000, // Adjust the port if needed
     host: '0.0.0.0', // This allows access from external devices
+    proxy: {
+      '/api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+        // secure: false,
+        // ws: true,
+      }
+    }
   },
   build: {
     outDir: 'dist', // Specify the output directory
